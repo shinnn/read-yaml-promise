@@ -1,0 +1,55 @@
+{
+  "name": "read-yaml-promise",
+  "version": "0.0.0",
+  "description": "Promise to read and parse a YAML file",
+  "repository": "shinnn/read-yaml-promise",
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn"
+  },
+  "scripts": {
+    "pretest": "eslint *.js test/test.js && jscs *.js test/test.js",
+    "test": "node test/test.js | tap-spec",
+    "coverage": "istanbul cover --no-default-excludes -x=node_modules/** test/test.js",
+    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shinnn/read-yaml-promise/blob/master/LICENSE"
+    }
+  ],
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "keywords": [
+    "yml",
+    "yaml",
+    "read",
+    "file",
+    "parse",
+    "data",
+    "promise",
+    "promises",
+    "then",
+    "thenable"
+  ],
+  "dependencies": {
+    "es6-promise": "^2.0.0",
+    "read-yaml": "git://github.com/shinnn/read-yaml#4c2d84f971dba4013946f99eab0a1550e3828812"
+  },
+  "devDependencies": {
+    "eslint": "^0.10.0",
+    "istanbul": "^0.3.4",
+    "istanbul-coveralls": "^1.0.1",
+    "js-yaml": "^3.2.3",
+    "jscs": "^1.8.1",
+    "tap-spec": "^2.1.1",
+    "tape": "^3.0.3"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98
+  }
+}
