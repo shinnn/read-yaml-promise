@@ -37,7 +37,7 @@
   ],
   "dependencies": {
     "es6-promise": "^2.0.0",
-    "read-yaml": "git://github.com/shinnn/read-yaml#4c2d84f971dba4013946f99eab0a1550e3828812"
+    "read-yaml": "^0.3.0"
   },
   "devDependencies": {
     "eslint": "^0.10.0",
