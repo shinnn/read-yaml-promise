@@ -1,6 +1,6 @@
 {
   "name": "read-yaml-promise",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Promise to read and parse a YAML file",
   "repository": "shinnn/read-yaml-promise",
   "author": {
