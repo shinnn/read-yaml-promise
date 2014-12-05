@@ -10,7 +10,6 @@ environment:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm install --global pnm
   - npm install --production
   - npm install js-yaml tape
 
