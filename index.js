@@ -8,7 +8,7 @@
 var ES6Promise = global.Promise || require('es6-promise').Promise;
 var readYaml = require('read-yaml');
 
-function readGlobPromise(filePath, options) {
+module.exports = function readYamlPromise(filePath, options) {
   var reject;
   var resolve;
 
@@ -24,6 +24,4 @@ function readGlobPromise(filePath, options) {
     resolve = _resolve;
     reject = _reject;
   });
-}
-
-module.exports = readGlobPromise;
+};

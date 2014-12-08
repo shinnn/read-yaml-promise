@@ -5,7 +5,9 @@ var test = require('tape');
 var yaml = require('js-yaml');
 
 test('readYamlPromise()', function(t) {
-  t.plan(10);
+  t.plan(11);
+
+  t.equal(readYaml.name, 'readYamlPromise', 'should have a function name.');
 
   readYaml('test/fixture.yaml').then(function(data) {
     t.deepEqual(data, [true], 'should read and parse a YAML file.');
