@@ -1,10 +1,11 @@
 # read-yaml-promise
 
+[![NPM version](https://img.shields.io/npm/v/read-yaml-promise.svg?style=flat)](https://www.npmjs.com/package/read-yaml-promise)
 [![Build Status](https://travis-ci.org/shinnn/read-yaml-promise.svg?branch=master)](https://travis-ci.org/shinnn/read-yaml-promise)
 [![Build status](https://ci.appveyor.com/api/projects/status/7gww0bcaas24rshu?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/read-yaml-promise)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/read-yaml-promise.svg)](https://coveralls.io/r/shinnn/read-yaml-promise)
-[![Dependency Status](https://david-dm.org/shinnn/read-yaml-promise.svg)](https://david-dm.org/shinnn/read-yaml-promise)
-[![devDependency Status](https://david-dm.org/shinnn/read-yaml-promise/dev-status.svg)](https://david-dm.org/shinnn/read-yaml-promise#info=devDependencies)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/read-yaml-promise.svg?style=flat)](https://coveralls.io/r/shinnn/read-yaml-promise)
+[![Dependency Status](https://img.shields.io/david/shinnn/read-yaml-promise.svg?style=flat&label=deps)](https://david-dm.org/shinnn/read-yaml-promise)
+[![devDependency Status](https://img.shields.io/david/dev/shinnn/read-yaml-promise.svg?style=flat&label=devDeps)](https://david-dm.org/shinnn/read-yaml-promise#info=devDependencies)
 
 [Promise] to read and parse a [YAML](http://yaml.org/) file
 
@@ -26,9 +27,7 @@ readYaml('fixture.yaml')
 
 ## Installation
 
-[![NPM version](https://badge.fury.io/js/read-yaml-promise.svg)](https://www.npmjs.org/package/read-yaml-promise)
-
-[Use npm.](https://www.npmjs.org/doc/cli/npm-install.html)
+[Use npm.](https://docs.npmjs.com/cli/install)
 
 ```
 npm install read-yaml-promise
@@ -43,7 +42,7 @@ var readYaml = require('read-yaml-promise');
 ### readYaml(*filePath* [, *options*])
 
 *filePath*: `String` (file path)  
-*options*: `Object` (options for [js-yaml](https://github.com/nodeca/js-yaml)'s [safeLoad](https://github.com/nodeca/js-yaml#safeload-string---options-) method and [fs.readFile](http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback)), or `String` (file encoding)  
+*options*: `Object` (options for [js-yaml](https://github.com/nodeca/js-yaml)'s [safeLoad](https://github.com/nodeca/js-yaml#safeload-string---options-) method and [fs.readFile](https://iojs.org/api/fs.html#fs_fs_readfile_filename_options_callback)), or `String` (file encoding)  
 Return: `Object` ([Promise])
 
 When it finish reading and parsing a YAML file, it will be [*fulfilled*](http://promisesaplus.com/#point-26) with an `Object` of the parsed data as its first argument.
@@ -71,7 +70,7 @@ Note that `filename` option is automatically specified using the first argument.
 
 ## License
 
-Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
 
