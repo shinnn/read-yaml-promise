@@ -12,8 +12,7 @@
   },
   "license": "MIT",
   "files": [
-    "index.js",
-    "LICENSE"
+    "index.js"
   ],
   "keywords": [
     "yml",
@@ -28,7 +27,6 @@
     "thenable"
   ],
   "dependencies": {
-    "es6-promise": "^2.0.1",
     "read-yaml": "^1.0.0"
   },
   "devDependencies": {

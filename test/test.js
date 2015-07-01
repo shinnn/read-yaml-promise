@@ -1,6 +1,6 @@
 'use strict';
 
-var readYaml = require('../');
+var readYaml = require('..');
 var test = require('tape');
 var yaml = require('js-yaml');
 
@@ -31,22 +31,26 @@ test('readYamlPromise()', function(t) {
   });
 
   t.throws(
-    readYaml.bind(null, 'test/fixture.yaml', 1), /TypeError.*arg/,
+    readYaml.bind(null, 'test/fixture.yaml', 1),
+    /TypeError/,
     'should throw a type error when the second argument is not a string or an object.'
   );
 
   t.throws(
-    readYaml.bind(null, 'test/fixture.yaml', 'utf7'), /Error.*encoding/,
+    readYaml.bind(null, 'test/fixture.yaml', 'utf7'),
+    /Error.*encoding/,
     'should throw an error when the encoding is unknown.'
   );
 
   t.throws(
-    readYaml.bind(null, true, ['foo']), /TypeError.*path/,
+    readYaml.bind(null, true, ['foo']),
+    /TypeError.*path/,
     'should throw a type error when the first argument is not a string.'
   );
 
   t.throws(
-    readYaml.bind(null), /TypeError.*path/,
+    readYaml.bind(null),
+    /TypeError.*path/,
     'should throw a type error when it takes no arguments.'
   );
 });
