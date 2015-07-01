@@ -3,22 +3,14 @@
   "version": "1.0.2",
   "description": "Promise to read and parse a YAML file",
   "repository": "shinnn/read-yaml-promise",
-  "author": {
-    "name": "Shinnosuke Watanabe",
-    "url": "https://github.com/shinnn"
-  },
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint *.js test/test.js && jscs *.js test/test.js",
+    "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json index.js test/test.js",
     "test": "node test/test.js | tap-spec",
     "coverage": "istanbul cover --no-default-excludes -x=node_modules/** test/test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/read-yaml-promise/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "files": [
     "index.js",
     "LICENSE"
@@ -40,16 +32,12 @@
     "read-yaml": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^0.18.0",
-    "istanbul": "^0.3.13",
-    "istanbul-coveralls": "^1.0.2",
-    "js-yaml": "^3.2.7",
-    "jscs": "^1.12.0",
-    "tap-spec": "^3.0.0",
+    "@shinnn/eslintrc-node": "^1.0.2",
+    "eslint": "^0.24.0",
+    "istanbul": "^0.3.17",
+    "istanbul-coveralls": "^1.0.3",
+    "js-yaml": "^3.3.1",
+    "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
-  },
-  "jscsConfig": {
-    "preset": "google",
-    "maximumLineLength": 98
   }
 }
